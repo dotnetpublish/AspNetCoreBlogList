@@ -1,0 +1,70 @@
+@model AspNetCoreBlogList.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Create Blog Post Entry";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div class="form-horizontal">
+        <h4>ASP.NET Blog Post Entry</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="BlogPostImage" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BlogPostImage" type="file" name="blogImage" class="form-control" />
+                <span asp-validation-for="BlogPostImage" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BlogPostTitle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BlogPostTitle" class="form-control" />
+                <span asp-validation-for="BlogPostTitle" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BlogAuthor" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BlogAuthor" class="form-control" />
+                <span asp-validation-for="BlogAuthor" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TwitterHandle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TwitterHandle" class="form-control" />
+                <span asp-validation-for="TwitterHandle" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BlogPostLink" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BlogPostLink" class="form-control" />
+                <span asp-validation-for="BlogPostLink" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AspNetCoreVersion" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="AspNetCoreVersion" asp-items="Html.GetEnumSelectList<AspNetCoreVersion>()" class="form-control"></select>
+                <span asp-validation-for="AspNetCoreVersion" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
