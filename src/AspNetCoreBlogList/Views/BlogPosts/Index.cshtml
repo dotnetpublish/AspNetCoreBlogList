@@ -13,9 +13,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.BlogPostImage)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.BlogPostTitle)
             </th>
             <th>
@@ -36,9 +33,6 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                <img  height="75" Width="75" src="@Url.Action("RenderImage", new { Id= item.BlogPostId })" />
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BlogPostTitle)
             </td>
