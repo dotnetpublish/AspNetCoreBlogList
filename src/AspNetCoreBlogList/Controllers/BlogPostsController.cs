@@ -82,6 +82,7 @@ namespace AspNetCoreBlogList.Controllers
             return View(blog);
         }
 
+
         public async Task<byte[]> GetBytes(IFormFile file)
         {
             using (MemoryStream ms = new MemoryStream())
