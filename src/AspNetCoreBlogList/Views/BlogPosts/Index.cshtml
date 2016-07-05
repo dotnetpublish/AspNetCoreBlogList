@@ -1,0 +1,65 @@
+@model IEnumerable<AspNetCoreBlogList.Models.BlogPost>
+
+@{
+    ViewData["Title"] = "ASP.NET Core Blog Posts";
+}
+
+<h2>ASP.NET Core Blog Posts</h2>
+
+<p>
+    <a asp-controller="BlogPosts" asp-action="Create">Create New Blog Post Entry</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogPostImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogPostTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogAuthor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwitterHandle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogPostLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AspNetCoreVersion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img  height="75" Width="75" src="@Url.Action("RenderImage", new { Id= item.BlogPostId })" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogPostTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogAuthor)
+            </td>
+            <td>
+                <a asp-protocol="https" asp-host="twitter.com" asp-controller="@item.TwitterHandle">@Html.DisplayFor(modelItem => item.TwitterHandle)</a>
+            </td>
+            <td>
+                <!a href="@Html.Raw(item.BlogPostLink)">link</!a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetCoreVersion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BlogPostId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BlogPostId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BlogPostId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,54 @@
+@model AspNetCoreBlogList.Models.BlogPost
+
+@{
+    ViewData["Title"] = "View ASP.NET Blog Post Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ASP.NET Blog Post Entry</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogPostImage)
+        </dt>
+        <dd>
+            <img src="@Url.Action("RenderImage", new { Id= Model.BlogPostId })" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogPostTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlogPostTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogAuthor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlogAuthor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TwitterHandle)
+        </dt>
+        <dd>
+            <a asp-protocol="https" asp-host="twitter.com" asp-controller="@Model.TwitterHandle">@Html.DisplayFor(modelItem => Model.TwitterHandle)</a>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlogPostLink)
+        </dt>
+        <dd>
+            <!a href="@Html.Raw(Model.BlogPostLink)">@Html.DisplayFor(model => model.BlogPostLink)</!a>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetCoreVersion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AspNetCoreVersion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BlogPostId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

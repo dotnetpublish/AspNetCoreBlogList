@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4CEA32BD-31AC-438A-9671-FC2F08F7E54D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2C63B9A-EBFF-4DD9-AF7E-AA8B48DF8F90}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreBlogList", "src\AspNetCoreBlogList\AspNetCoreBlogList.xproj", "{213684D2-8C1E-4A2D-8F7F-8CE3644317CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ED97E31F-71FE-4719-A5D5-01C116482C03}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreBlogList.Test", "AspNetCoreBlogList.Test\AspNetCoreBlogList.Test.xproj", "{1A4F8E55-8698-4DF6-A996-B976BCB976F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{213684D2-8C1E-4A2D-8F7F-8CE3644317CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213684D2-8C1E-4A2D-8F7F-8CE3644317CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213684D2-8C1E-4A2D-8F7F-8CE3644317CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213684D2-8C1E-4A2D-8F7F-8CE3644317CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4F8E55-8698-4DF6-A996-B976BCB976F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4F8E55-8698-4DF6-A996-B976BCB976F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4F8E55-8698-4DF6-A996-B976BCB976F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4F8E55-8698-4DF6-A996-B976BCB976F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{213684D2-8C1E-4A2D-8F7F-8CE3644317CB} = {4CEA32BD-31AC-438A-9671-FC2F08F7E54D}
+		{1A4F8E55-8698-4DF6-A996-B976BCB976F7} = {ED97E31F-71FE-4719-A5D5-01C116482C03}
+	EndGlobalSection
+EndGlobal
