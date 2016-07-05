@@ -9,11 +9,6 @@ namespace AspNetCoreBlogList.Models
 {
     public class BlogPost
     {
-        public BlogPost()
-        {
-            AspNetCoreVersion = AspNetCoreVersion.ASPNETCoreRTM;
-        }
-
         [Key]
         [ScaffoldColumn(false)]
         public int BlogPostId { get; set; }
@@ -43,12 +38,9 @@ namespace AspNetCoreBlogList.Models
 
     public enum AspNetCoreVersion
     {
-       ASPNETCoreRC1,
-       ASPNETCoreRC2,
-       ASPNETCoreRTM,
-       ASPNETCoreToolingPreview1,
-       ASPNETCoreToolingPreview2,
-       NotApplicable,
-       AllVersions
+        ASPNETCoreRTM,
+        ASPNETCoreRC2,
+        ASPNETCoreRC1,
+        AllVersions
     }
 }
